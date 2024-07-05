@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Jadwal Pelajaran</title>
+    <link rel="stylesheet" href="../main.css">
+    <style>
+        /* Custom styling for wider table and form */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="create.html">Create Jadwal</a></li>
+            <li><a href="list.html">List Jadwal</a></li>
+            <li><a href="../index.html">DASHBOARD</a></li>
+        </ul>
+    </nav>
+    <h1>Create Jadwal Pelajaran</h1>
+    <form id="createJadwalForm">
+        <div class="form-group">
+            <label for="kelas">Kelas:</label>
+            <select id="kelas" name="kelas" class="form-control" required>
+                <option value="">Pilih Kelas</option>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="guru">Guru:</label>
+            <select id="guru" name="guru" class="form-control" required>
+                <option value="">Pilih Guru</option>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="hari">Hari:</label>
+            <select id="hari" name="hari" class="form-control" required>
+                <option value="">Pilih Hari</option>
+                <!-- Options populated from Day enum using JavaScript -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="jamMulai">Jam Mulai:</label>
+            <input type="time" id="jamMulai" name="jamMulai" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="jamSelesai">Jam Selesai:</label>
+            <input type="time" id="jamSelesai" name="jamSelesai" class="form-control" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="create.js"></script>
+    <script>
+        // Populate days from Day enum in Bahasa Indonesia
+        const hariSelect = document.getElementById('hari');
+        const days = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
+        
+        days.forEach(day => {
+            const option = document.createElement('option');
+            option.value = day.toUpperCase(); // Use uppercase for consistency
+            option.textContent = day;
+            hariSelect.appendChild(option);
+        });
+    </script>
+</body>
+</html>

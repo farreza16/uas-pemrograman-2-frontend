@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Jadwal Pelajaran</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 50px;
+        }
+        form {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Jurusan Management</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="create.html">Create Jadwal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list.html">List Jadwal</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">DASHBOARD</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="text-center">Update Jadwal Pelajaran</h1>
+    <form id="updateForm">
+        <input type="hidden" id="id" name="id">
+        
+        <div class="form-group">
+            <label for="kelas">Kelas:</label>
+            <select class="form-control" id="kelas" name="kelas" required></select>
+        </div>
+
+        <div class="form-group">
+            <label for="guru">Guru:</label>
+            <select class="form-control" id="guru" name="guru" required></select>
+        </div>
+
+        <div class="form-group">
+            <label for="hari">Hari:</label>
+            <select class="form-control" id="hari" name="hari" required>
+                <option value="SENIN">Senin</option>
+                <option value="SELASA">Selasa</option>
+                <option value="RABU">Rabu</option>
+                <option value="KAMIS">Kamis</option>
+                <option value="JUMAT">Jumat</option>
+                <option value="SABTU">Sabtu</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="jamMulai">Jam Mulai:</label>
+            <input type="time" class="form-control" id="jamMulai" name="jamMulai" required>
+        </div>
+
+        <div class="form-group">
+            <label for="jamSelesai">Jam Selesai:</label>
+            <input type="time" class="form-control" id="jamSelesai" name="jamSelesai" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="update.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Jadwal Pelajaran</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="create.html">Create Jadwal</a></li>
+            <li><a href="list.html">List Jadwal</a></li>
+            <li><a href="../index.html">DASHBOARD</a></li>
+        </ul>
+    </nav>
+    <h1>List Jadwal Pelajaran</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Kelas</th>
+                <th>Guru</th>
+                <th>Hari</th>
+                <th>Jam Mulai</th>
+                <th>Jam Selesai</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="jadwalList">
+            <!-- Jadwal Pelajaran will be populated here -->
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="list.js"></script>
+</body>
+</html>

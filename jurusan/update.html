@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Jurusan</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="container mt-4">
+        <h1>Update Jurusan</h1>
+        <form id="jurusanForm">
+            <input type="hidden" id="jurusanId">
+            <div class="form-group">
+                <label for="kodeJurusan">Kode Jurusan:</label>
+                <input type="text" class="form-control" id="kodeJurusan" name="kodeJurusan" required>
+            </div>
+            <div class="form-group">
+                <label for="namaJurusan">Nama Jurusan:</label>
+                <input type="text" class="form-control" id="namaJurusan" name="namaJurusan" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="update.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>
